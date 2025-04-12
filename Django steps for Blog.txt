@@ -1,0 +1,35 @@
+Steps - 
+	- pip install django
+	- python -m django startproject blog_project
+	- cd blog_project
+	- python manage.py startapp blog
+	- Register the Blog App
+		- Open blog_project/settings.py and add 'blog' to the INSTALLED_APPS
+	- Define Models (Database Structure)
+		- Open blog/models.py and define a Post model:
+			
+from django.db import models
+
+class Post(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+
+	- python manage.py makemigrations
+
+	- python manage.py migrate
+
+	- Register Model in Admin Panel
+		- Open blog/admin.py and register the Post model:
+
+from django.contrib import admin
+from .models import Post
+
+admin.site.register(Post)
+
+	- python manage.py runserver
+
+	- http://127.0.0.1:8000/admin/
