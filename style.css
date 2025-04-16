@@ -33,6 +33,7 @@ header , image {
     height: 120px;     
     width: 170px; 
     background-position: start;
+    /* margin-left: 100px; */
 }
 
 .nav-box{
