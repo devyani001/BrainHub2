@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Aladin&family=Chokokutai&family=Permanent+Marker&family=Unica+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
 
 body{
     margin: 0;
@@ -10,6 +11,7 @@ body{
     
 
 }
+
 
 header , image {
     min-height: 100vh; 
@@ -53,6 +55,8 @@ nav{
     justify-content: space-around;
 }
 
+
+
 ul{
     display: flex;
     flex-wrap: wrap;
@@ -63,33 +67,9 @@ ul{
 li{
     margin: 0 20px;
     list-style: none;
+    color: #fff;
 }
 
-
-
-/*  */
-
-/* .container{
-    display: flex;
-    flex-wrap: wrap;
-    /* justify-content: center; *
-    margin: 0 50px;
-}
-
-
-
-.boxes{
-    border: 1px solid red;
-    /* margin: 0 150    px; *
-} */
-
-
-
-
-
-
-
-/*  */
 .main-heading{
     width: 90%;
     color: #fff;
@@ -99,11 +79,12 @@ li{
     transform: translate(-50%,-50%);/*for align text centre*/
     text-align: center;
     font-size: 25px;
-   
+    background-color: transparent;
 }
 
 h1{
     margin-bottom: 10px;
+    /* font-size: 3em; */
 }
 
 p{
@@ -112,176 +93,11 @@ p{
     padding-top: 0;
 }
 
+/* NEW NAV BAR */
 
-
-
-
-/* 2nd page */
-
-.hero-btn {
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 12px 34px;
-    font-size: 13px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
+@media (max-width : 991px) {
+    #offcanvasNavbar{
+        background-color: rgba(255,255,255,0.15);
+        backdrop-filter: blur(10px);
+    }
 }
-
-.hero-btn:hover{
-    border: 1px solid #f44366; 
-    background: #f44366;
-    transition: 1s; 
-    color: white;
-}
-
-nav .fa{
-    display: none;/*icon will be hidden for larger screen devices*/
-}
-
-.container { 
-    box-sizing: border-box; 
-    min-height: 100vh;  
-    display: flex; 
-    justify-content: space-evenly; 
-    text-align: center;   
-    gap: 20px;  
-    border: 2px solid none;
-    /* margin-bottom: 200px; */
-/* /    background-image: url("https://tse2.mm.bing.net/th?id=OIP.djs9mGfRplWKYqinBqqjjAHaDX&pid=Api&P=0&h=180"); */
-/* background-image: url("https://wallpapercave.com/wp/wp3855137.jpg"); */
-background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)),url("https://wallpaperaccess.com/full/4230797.jpg");
-/* above img - 2nd page */
-    /* background-image: url("https://wallpaper.dog/large/20372204.jpg"); */
-    /* background-color: #2F4F4F;b;uish */
-    /* background-color: #daa520;/*yellowish */
-    /* background-color: #253342;off black */
-    /* background-color: #3d5a80;  */
-    /* background-color: #354F52; */
-    overflow: hidden;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    border: 1px solid none;
-}
- 
-.left-text {
-    flex-basis: 30%;
-    border: 2px solid none;
-    padding-top: 150px;
-}
-
-.heading {
-    font-size: 3rem;
-    color: white;
-    text-align: center;
-}
-
-.subheading {
-    color: white;
-    margin-top: 10px;
-    text-align: center;
-    font-family: "Sriracha", cursive;
-    font-size: 18px;
-}
-
-.gallary {
-    flex-basis: 50%;
-    display: grid;
-    margin-top: 70px;
-    gap: 8px;/*row m gap aayegi*/
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 120px;
-    border: 1px solid none;
-    margin-top: 100px;
-} 
-  
-.box { 
-    background-size: cover;/*puri ki puri image dikhegi*/
-    background-position: top;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    background-color: #222;
-    background-blend-mode: hard-light;
-    transition: all 1s ease-in-out;
-    cursor: pointer;
-}   
- 
-.box:hover {  
-    background-color: #999;  
-    background-position: center;
-    box-shadow: 0 0 4px #fff;
-} 
-
-.row {   
-    grid-row: span 2;
-} 
- 
-.col { 
-    grid-column: span 2;
-}  
-
-/* #box-2 {
-   
-    transition: 3s ease-in-out;
-} 
-
-#box-6 { 
-    transition: 2s ease-in-out;
-} */
-
-
-#box-8 { 
-    grid-area: 3 / 3 / 5 /  4; 
-} 
-
-button {
-    margin: 10px;
-    padding: 10px 20px;
-    background: transparent;
-    /* color: #daa520;  */ 
-    color: white;
-    font-size: 16px; 
-    font-weight: 800; 
-    letter-spacing: 1px;
-    border: white; 
-    transition: 0.5s;  
-}    
-   
-button:hover{    
-    /* HOT  */
-    /* display: none; */
-    background-color: transparent; 
-    /* box-shadow: 0 0 4px red;  */
-    box-shadow: 0 0 4px none;
-    /* color: yellow; */
-    color: transparent;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* /
- */
- /*  */
-
- 
