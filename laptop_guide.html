@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Explore Laptops - BrainHub2</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Aladin&family=Chokokutai&family=Permanent+Marker&family=Unica+One&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=New+Rocker&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+    
+    html, body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /*height: 100%;*/
+        scroll-behavior: smooth;
+      }
+    
+    header , image {
+        /*min-height: 100vh;*/ 
+        width: 100%;
+        /* background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)),url(https://images.collegedunia.com/public/reviewPhotos/369496/inbound6449048373204272265.jpg?mode=cover); */
+        /*background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)),url(https://wallpaperaccess.com/full/4230797.jpg);
+        /* background-image: url("https://wallpapercave.com/wp/wp3855137.jpg"); */
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        /* overflow: hidden; */
+    }
+    
+    
+    /* NAVBAR */
+    
+    .bhlogo {
+        border: 2px solid none;
+        height: 120px;     
+        width: 170px; 
+        background-position: start;
+        /* margin-left: 100px; */
+    }
+    
+    .nav-box{
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid none;
+    }
+    
+    .left{
+        align-items: center;
+    }
+    
+    .right{
+        justify-content: space-between;
+    }
+    
+    nav{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    
+    
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid none; 
+        align-items: center;  
+    }
+    
+    li{
+        margin: 0 20px;
+        list-style: none;
+        color: #fff;
+    }
+    
+    .main-heading{
+        width: 90%;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%; 
+        transform: translate(-50%,-50%);/*for align text centre*/
+        text-align: center;
+        font-size: 25px;
+        background-color: transparent;
+    }
+    
+    h1{
+        margin-bottom: 10px;
+        /* font-size: 3em; */
+    }
+    
+    p{
+        font-size: 14px;
+        margin-top: 0;
+        padding-top: 0;
+    }
+    
+    /* NEW NAV BAR */
+    
+    @media (max-width : 991px) {
+        #offcanvasNavbar{
+            background-color: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+        }
+    
+        .bhlogo {
+            border: 2px solid none;
+            height: 60px;     
+            width: 80px; 
+            background-position: start;
+            /* margin-left: 100px; */
+        }
+        
+    }
+    
+    
+
+
+
+
+    
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .navbar {
+      background-color: #111;
+      border-bottom: 1px solid #222;
+    }
+
+    .navbar-brand {
+      color: #00e5ff;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .nav-link {
+      color: #ccc !important;
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover {
+      color: #00e5ff !important;
+    }
+
+    .category-section {
+      padding: 60px 20px;
+    }
+
+    .category-section h2 {
+      text-align: center;
+      color: #00e5ff;
+      margin-bottom: 40px;
+      text-shadow: 0 0 10px #00e5ff;
+    }
+
+    .card {
+      background-color: #111;
+      border: 1px solid #00e5ff20;
+      border-radius: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
+    }
+
+    .card-img-top {
+      height: 200px;
+      object-fit: contain;
+      background-color: #222;
+      padding: 10px;
+    }
+
+    .card-title {
+      color: #00e5ff;
+    }
+
+    footer {
+      background-color: #111;
+      padding: 30px;
+      text-align: center;
+      color: #777;
+      border-top: 1px solid #222;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+    <div class="container">
+      <!-- logo -->
+      <a class="navbar-brand fs-4" href="index.html">
+        <img style="margin-left: 4rem;" class="bhlogo ms-2 ms-lg-5" src="BHlogo.png" alt="Logo" />
+      </a>
+      <!-- togglebtn -->
+      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- sidebar -->
+      <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <!-- sidebar header -->
+        <div class="offcanvas-header text-white border-bottom">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+          <button type="button" class="btn-close text-reset btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <!-- sidebar body -->
+        <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#features">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+
+          <!-- login / sign up -->
+          <div class="d-flex flex-lg-row flex-column justify-content-center align-items-center gap-3">
+            <a href="login" class="text-white">Login</a>
+            <a href="signup" class="text-white text-decoration-none px-3 py-1 rounded-4" style="background-color: #f94ca4;">Sign up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="container">
+
+  <!-- Section: Below 60K -->
+  <section class="category-section" data-aos="fade-up">
+    <h2>💸 Laptops Below ₹60K</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://cdn.pixabay.com/photo/2017/03/14/13/14/laptop-2140006_1280.png" class="card-img-top" alt="Laptop 1">
+          <div class="card-body">
+            <h5 class="card-title">HP Ryzen 5</h5>
+            <p class="card-text">Great for students & coders. 8GB RAM, 512GB SSD.</p>
+            <span class="text-muted">Updated 2 hrs ago</span>
+          </div>
+        </div>
+      </div>
+      <!-- Add more laptops similarly -->
+    </div>
+  </section>
+
+  <!-- Section: Above 60K -->
+  <section class="category-section" data-aos="fade-up">
+    <h2>🚀 Laptops Above ₹60K</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://cdn.pixabay.com/photo/2016/03/30/20/11/macbook-1292082_1280.png" class="card-img-top" alt="Laptop 3">
+          <div class="card-body">
+            <h5 class="card-title">ASUS VivoBook Pro</h5>
+            <p class="card-text">Ryzen 7, 16GB RAM, NVIDIA graphics for creators.</p>
+            <span class="text-muted">Updated 1 day ago</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: MacBooks -->
+  <section class="category-section" data-aos="fade-up">
+    <h2>🍏 MacBooks</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://cdn.pixabay.com/photo/2016/03/30/20/11/macbook-1292082_1280.png" class="card-img-top" alt="MacBook Air">
+          <div class="card-body">
+            <h5 class="card-title">MacBook Air M1</h5>
+            <p class="card-text">Ultra-fast, sleek & reliable for students.</p>
+            <span class="text-muted">Updated 3 days ago</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Windows -->
+  <section class="category-section" data-aos="fade-up">
+    <h2>🖥️ Windows Laptops</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/laptop-1869820_1280.jpg" class="card-img-top" alt="Windows Laptop">
+          <div class="card-body">
+            <h5 class="card-title">Dell Inspiron</h5>
+            <p class="card-text">Perfect for multitasking, office work & media.</p>
+            <span class="text-muted">Updated 8 hrs ago</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Footer -->
+<footer>
+  © 2025 BrainHub2. Designed with 💙 for college students.
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+</body>
+</html>

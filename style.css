@@ -288,3 +288,119 @@ button:hover{
         grid-column: span 3;
     }
 }
+
+/* cards */
+
+.card:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline-primary:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
+
+
+/*  */
+
+
+/* 🌌 Laptop Guide Section Styles */
+.laptop-guide {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  padding: 60px 20px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.laptop-guide::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(79,195,247,0.1), transparent);
+  animation: floatGlow 10s infinite alternate ease-in-out;
+  z-index: 0;
+}
+
+@keyframes floatGlow {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-100px, 100px); }
+}
+
+.guide-content {
+  position: relative;
+  z-index: 1;
+}
+
+.guide-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #4fc3f7;
+}
+
+.guide-content p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.laptop-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.laptop-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 20px;
+  width: 260px;
+  box-shadow: 0 0 15px rgba(0, 150, 255, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  backdrop-filter: blur(8px);
+}
+
+.laptop-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(79, 195, 247, 0.5);
+}
+
+.laptop-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.laptop-card h3 {
+  color: #4fc3f7;
+  margin-bottom: 5px;
+}
+
+.laptop-card span {
+  font-size: 0.75rem;
+  color: #ccc;
+}
+
+.see-more-btn {
+  margin-top: 40px;
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #4fc3f7;
+  color: #000;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.see-more-btn:hover {
+  background-color: #03a9f4;
+}

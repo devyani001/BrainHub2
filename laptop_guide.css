@@ -1,0 +1,118 @@
+body.dark-theme {
+    background-color: #121212;
+    color: #f1f1f1;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    background-color: #1f1f1f;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .navbar a.active {
+    color: #4fc3f7;
+  }
+  
+  .title-section {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(to right, #1f1f1f, #2a2a2a);
+  }
+  
+  .card-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .card {
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(79, 195, 247, 0.2);
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card h3, .card p, .card .timestamp {
+    padding: 10px 15px;
+  }
+  
+  .timestamp {
+    font-size: 0.8rem;
+    color: #aaa;
+  }
+  
+  .see-more-container {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .see-more-container button {
+    background-color: #4fc3f7;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+  }
+  
+  .see-more-container button:hover {
+    background-color: #0288d1;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .extra-info {
+    background-color: #222;
+    text-align: center;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #4fc3f7;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f1f1f;
+    color: #bbb;
+    font-size: 0.9rem;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
