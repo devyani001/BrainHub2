@@ -1,234 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-
-<body>
-  <!-- version 1 -->
-  <div class="container">
-    <div class="product-card">
-      <img src="https://i.pinimg.com/736x/6f/7b/43/6f7b43ab25914080c0d61454e8646fa9.jpg" alt="">
+<!-- Footer Start -->
+<footer style="background-color: #0f0f1b; color: #fff; font-family: sans-serif;">
+  <div style="background-color: #7a7dbd; padding: 30px; margin: 0 auto; max-width: 960px; transform: translateY(-50%); box-shadow: 0 8px 16px rgba(0,0,0,0.2); display: flex; justify-content: space-between; align-items: center; border-radius: 4px;">
+    <div>
+      <h3 style="margin: 0; color: #fff;">Ready for a next project?</h3>
+      <p style="margin: 5px 0 0; color: #eee;">Let's get started!</p>
     </div>
-
-    <div class="product-card">
-      <img src="https://i.pinimg.com/474x/6b/6c/ce/6b6cce22e12fbd4a6e79d168558b2f0a.jpg" alt="">
-    </div>
-
-    <div class="product-card">
-      <img src="https://i.pinimg.com/474x/73/d9/d7/73d9d7ceaa050d230375d9dc7080c3cc.jpg" alt="">
-    </div>
+    <a href="#contact" style="background-color: #2c2c2c; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 2px;">Contact us</a>
   </div>
 
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; padding: 40px 10%; text-align: left;">
+    <div style="margin: 10px;">
+      <h4>BrainHub</h4>
+      <p>© 2025</p>
+    </div>
 
+    <div style="margin: 10px;">
+      <h4>Customers</h4>
+      <p>Buyer</p>
+      <p>Supplier</p>
+    </div>
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+    <div style="margin: 10px;">
+      <h4>Company</h4>
+      <p>About us</p>
+      <p>Careers</p>
+      <p>Contact us</p>
+    </div>
 
-    $opacity-front: 1;
-    $opacity-back: .2;
-    $blur-front: 0;
-    $blur-back: .8px;
-    $drop-front: 4px 10px 10px rgba(0, 0, 0, .6);
-    $drop-back: 4px 4px 4px rgba(0, 0, 0, .2);
+    <div style="margin: 10px;">
+      <h4>Further Info</h4>
+      <p>Terms & Conditions</p>
+      <p>Privacy Policy</p>
+    </div>
 
-    body {
-      background: linear-gradient(#00446A 50%, #1c88c7);
-      height: 100vh;
-      box-sizing: border-box;
-    }
-
-    .container {
-      max-width: 980px;
-      padding: 0 32px;
-      box-sizing: border-box;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: auto;
-      height: 100%;
-
-      transform: perspective(60px);
-      transform-style: preserve-3d;
-    }
-
-    .product-card {
-      max-width: 360px;
-
-      img {
-        width: 100%;
-      }
-
-      &:nth-child(1) {
-        transform: translate3d(0, 0, -15px);
-        animation-name: rotate-left;
-        animation-duration: 14s;
-        animation-iteration-count: infinite;
-        animation-delay: .5s;
-        animation-timing-function: ease-in-out;
-        filter: drop-shadow($drop-back);
-      }
-
-      &:nth-child(2) {
-        transform: translate3d(0, 0, 5px);
-        animation-name: rotate-center;
-        animation-duration: 14s;
-        animation-iteration-count: infinite;
-        animation-delay: .5s;
-        animation-timing-function: ease-in-out;
-        filter: drop-shadow($drop-front);
-      }
-
-      &:nth-child(3) {
-        transform: translate3d(0, 0, -15px);
-        animation-name: rotate-right;
-        animation-duration: 14s;
-        animation-iteration-count: infinite;
-        animation-delay: .5s;
-        animation-timing-function: ease-in-out;
-        filter: drop-shadow($drop-back);
-      }
-    }
-
-    @keyframes rotate-left {
-
-      0%,
-      100% {
-        transform: translate3d(0, 0, -15px);
-        filter: blur($blur-back) drop-shadow($drop-back);
-      }
-
-      33.33% {
-        transform: translate3d(100%, 0, 5px);
-        filter: blur($blur-front) drop-shadow($drop-front);
-      }
-
-      66.66% {
-        transform: translate3d(200%, 0, -15px);
-        filter: blur($blur-back) drop-shadow($drop-back);
-      }
-    }
-
-    @keyframes rotate-center {
-
-      0%,
-      100% {
-        transform: translate3d(0, 0, 5px);
-        filter: blur($blur-front) drop-shadow($drop-front);
-      }
-
-      33.33% {
-        transform: translate3d(100%, 0, -15px);
-        filter: blur($blur-back) drop-shadow($drop-back);
-      }
-
-      66.66% {
-        transform: translate3d(-100%, 0, -15px);
-        filter: blur($blur-back) drop-shadow($drop-back);
-      }
-    }
-
-    @keyframes rotate-right {
-
-      0%,
-      100% {
-        transform: translate3d(0, 0, -15px);
-        filter: blur($blur-back) drop-shadow($drop-back);
-      }
-
-      33.33% {
-        transform: translate3d(-200%, 0, -15px);
-        filter: blur($blur-back) drop-shadow($drop-back);
-      }
-
-      66.66% {
-        transform: translate3d(-100%, 0, 5px);
-        filter: blur($blur-front) drop-shadow($drop-front);
-      }
-    }
-
-    @media (max-width: 480px) {
-
-      .container {
-        flex-direction: column;
-      }
-
-      .product-card {
-
-        &:nth-child(1) {
-          transform: translate3d(0, 0, -15px);
-        }
-
-        &:nth-child(2) {
-          transform: translate3d(0, 0, 0);
-        }
-
-        &:nth-child(3) {
-          transform: translate3d(0, 0, -15px);
-        }
-      }
-
-      @keyframes rotate-left {
-
-        0%,
-        100% {
-          transform: translate3d(0, 0, -15px);
-          filter: blur($blur-back) drop-shadow($drop-back);
-        }
-
-        33.33% {
-          transform: translate3d(0, 100%, 5px);
-          filter: blur($blur-front) drop-shadow($drop-front);
-        }
-
-        66.66% {
-          transform: translate3d(0, 200%, -15px);
-          filter: blur($blur-back) drop-shadow($drop-back);
-        }
-      }
-
-      @keyframes rotate-center {
-
-        0%,
-        100% {
-          transform: translate3d(0, 0, 5px);
-          filter: blur($blur-front) drop-shadow($drop-front);
-        }
-
-        33.33% {
-          transform: translate3d(0, 100%, -15px);
-          filter: blur($blur-back) drop-shadow($drop-back);
-        }
-
-        66.66% {
-          transform: translate3d(0, -100%, -15px);
-          filter: blur($blur-back) drop-shadow($drop-back);
-        }
-      }
-
-      @keyframes rotate-right {
-
-        0%,
-        100% {
-          transform: translate3d(0, 0, -15px);
-          filter: blur($blur-back) drop-shadow($drop-back);
-        }
-
-        33.33% {
-          transform: translate3d(0, -200%, -15px);
-          filter: blur($blur-back) drop-shadow($drop-back);
-        }
-
-        66.66% {
-          transform: translate3d(0, -100%, 5px);
-          filter: blur($blur-front) drop-shadow($drop-front);
-        }
-      }
-    }
-  </style>
-</body>
-
-</html>
+    <div style="margin: 10px;">
+      <h4>Follow us</h4>
+      <div style="display: flex; gap: 10px; margin-top: 8px;">
+        <a href="#" style="color: #7a7dbd;">🔵</a>
+        <a href="#" style="color: #7a7dbd;">📘</a>
+        <a href="#" style="color: #7a7dbd;">💼</a>
+        <a href="#" style="color: #7a7dbd;">📨</a>
+        <a href="#" style="color: #7a7dbd;">📱</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Footer End -->
