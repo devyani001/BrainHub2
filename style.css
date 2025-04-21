@@ -122,9 +122,9 @@ p{
 
     header , image {
       
-        /* background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)),url(https://images.collegedunia.com/public/reviewPhotos/369496/inbound6449048373204272265.jpg?mode=cover); */
+        background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)),url(https://images.collegedunia.com/public/reviewPhotos/369496/inbound6449048373204272265.jpg?mode=cover);
         /* background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)),url(https://wallpaperaccess.com/full/4230797.jpg); */
-        background-image: url("https://wallpapercave.com/wp/wp3855137.jpg");
+        /* background-image: url("https://wallpapercave.com/wp/wp3855137.jpg"); */
        
     }
     
