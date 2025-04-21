@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=New+Rocker&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
 
+body{
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(https://wallpaperaccess.com/full/4230797.jpg);
+}
+
 html,
 body {
     margin: 0;
@@ -28,6 +32,7 @@ header,
 image {
     min-height: 100vh;
     width: 100%;
+    /* background-color: #00111a; */
     /* background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)),url(https://images.collegedunia.com/public/reviewPhotos/369496/inbound6449048373204272265.jpg?mode=cover); */
     background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(https://wallpaperaccess.com/full/4230797.jpg);
     /* background-image: url("https://wallpapercave.com/wp/wp3855137.jpg"); */
@@ -329,7 +334,10 @@ button:hover {
 
 /* 🌌 Laptop Guide Section Styles */
 .laptop-guide {
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    /* background-image: url('https://wallpaperaccess.com/full/4230797.jpg'); */
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(https://wallpaperaccess.com/full/4230797.jpg);
+    background-size: cover;
+    background-position: center;
     padding: 60px 20px;
     color: #fff;
     text-align: center;
@@ -337,6 +345,7 @@ button:hover {
     overflow: hidden;
 }
 
+/* 
 .laptop-guide::before {
     content: "";
     position: absolute;
@@ -344,10 +353,16 @@ button:hover {
     left: -100px;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(79, 195, 247, 0.1), transparent);
+    /* background: radial-gradient(circle, rgba(79, 195, 247, 0.1), transparent); *
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(https://wallpaperaccess.com/full/4230797.jpg);
     animation: floatGlow 10s infinite alternate ease-in-out;
     z-index: 0;
+} */
+
+.laptop-guide::before {
+    content: none;
 }
+
 
 @keyframes floatGlow {
     0% {
@@ -439,7 +454,7 @@ button:hover {
 }
 
 .background {
-   margin: 30px 30px 0 30px;
+   margin: 40px 30px 0 30px;
    padding-bottom: 0px;
    font-family: "Unica One", sans-serif;
    text-shadow: 0 0 5px #2b2122c5, 0 0 25px #2b2122c5, 0 0 50px #2b2122c5, 0 0 100px #2b2122c5;
