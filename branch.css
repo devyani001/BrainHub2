@@ -21,7 +21,7 @@ h1{
     background-size: cover;
     background-position: center;
     /* padding: 100px; */
-    border: 1px solid red;
+    border: 1px solid none;
     /* margin: 50px 50px 50px 50px; */
 }
 img{

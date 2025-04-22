@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-image: url("it_image.png"); */
+    background-size: cover;
+    
+}
+
+h1{
+    text-align: center;
+    text-shadow: 3px 3px 0px white;
+    margin-top: 40px;
+}
+
+h2{
+    /* text-align: center; */
+    color: white;
+    margin: 100px 0 50px 120px;
+    /* background: transparent; */
+}
+
+h3{
+    /* text-align: center; */
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    margin-left: 120px;
+    /* background: transparent; */
+}
+
+h4{
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    /* background: transparent; */
+}
+
+/* BOX TABLE */
+ 
+li{
+    padding: 10px;
+    list-style: square; 
+}
+ 
+.data{  
+    width: 950px;
+    color: yellow; 
+    /* background: linear-gradient(to right, #041308, rgb(0, 0, 47)); */
+    /* background: transparent; */
+    
+    /* background-color: white; */ 
+    /* margin: 20px 250px; */
+    
+}
+
+.syllabus {
+    /* justify-content: center; */
+    justify-items: center;
+    /* border: 2px solid red; */
+    /* justify-content: center; */
+    /* width: 100%; */
+    /* height: 500px; */
+    /* margin: 0 100px 0 100px; */
+}
+
+.language{ 
+    /* margin-left: 22px; */
+    /* list-style: none; */
+    border: none;
+}
+
+.lang-margin {
+    list-style: circle;
+    margin-left: 50px;
+}
+
+.index {
+    padding: 20px;
+    text-align: center; 
+}
+
+.index-download { 
+    text-align: center;
+}
+
+/* pdf section */
+
+.container, .container_2 {
+    border: 2px solid none;
+    height: 1200px;
+    display: flex;
+    /* flex-direction: column-reverse; */
+    flex-wrap: wrap;
+    row-gap: 0px;
+    /* column-gap: 20px; */
+    /* justify-content: space-around; */
+    justify-content: center;
+    align-content: space-evenly;
+}
+
+.box {
+    border: 1px solid none;
+    color: yellow;
+    height: 390px;
+    width: 330px;
+    text-align: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.box:hover {
+    box-shadow: 10px 10px 0 0 grey;
+    box-shadow: 0 0 21px darkgray;
+
+}
+
+.button {
+    color: #f44366;
+    text-align: center;
+    /* border: 1px solid wheat; */
+}
+
+.btn{
+    color: #fff;
+    border: 1px solid #fff;
+    display: inline-block;
+    padding: 12px 34px;
+    margin-bottom: 150px;
+}
+
+.btn:hover{
+    border: 1px solid #f44366; 
+    background: #f44366;
+    transition: 1s; 
+    color: white;
+}
+
+.btn a{
+    text-decoration: none;
+    color: #fff;
+}
