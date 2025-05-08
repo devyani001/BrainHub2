@@ -94,22 +94,19 @@ li {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    /*for align text centre*/
+    transform: translate(-50%, -50%);   /*for align text centre*/
     text-align: center;
-    font-size: 25px;
+    font-size: 62px;
     background-color: transparent;
 }
 
-h1 {
-    margin-bottom: 10px;
-    /* font-size: 3em; */
+.fyheading {
+    font-size: 62px;
 }
 
-.fyheading {
-    
-    font-size: 62px;
-   
+
+h1 {
+    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 479px) {
