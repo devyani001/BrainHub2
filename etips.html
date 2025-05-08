@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BrainHub2 Engineering Tips</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+    }
+
+    .tips-section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .tips-section h2 {
+      text-align: center;
+      font-size: 2.8rem;
+      color: #38f9d7;
+      margin-bottom: 10px;
+      text-shadow: 0 0 12px #38f9d7;
+    }
+
+    .tips-section p {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-bottom: 40px;
+    }
+
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .tip-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 15px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 0 12px rgba(56, 249, 215, 0.3);
+      transition: 0.4s ease;
+      cursor: pointer;
+    }
+
+    .tip-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(56, 249, 215, 0.6);
+    }
+
+    .tip-card h3 {
+      color: #38f9d7;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .tip-card p {
+      font-size: 0.95rem;
+      color: #bbb;
+    }
+
+    @media (max-width: 600px) {
+      .tips-section h2 {
+        font-size: 2rem;
+      }
+
+      .tip-card h3 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="tips-section" id="tips">
+    <h2>⚙️ Engineering Life Tips</h2>
+    <p>Smart hacks to survive and thrive in your B.Tech journey!</p>
+
+    <div class="tips-grid">
+      <div class="tip-card" data-aos="fade-up">
+        <h3>Time Management</h3>
+        <p>Use the Pomodoro technique while studying, and always make a weekly to-do list. Don’t wait till the deadline!</p>
+      </div>
+      <div class="tip-card" data-aos="fade-up" data-aos-delay="100">
+        <h3>Group Projects</h3>
+        <p>Choose your team wisely. Work with people who are responsible and can actually contribute.</p>
+      </div>
+      <div class="tip-card" data-aos="fade-up" data-aos-delay="200">
+        <h3>Intern Early</h3>
+        <p>Start applying for internships from the 2nd year. Use platforms like Internshala, LinkedIn, and Unstop.</p>
+      </div>
+      <div class="tip-card" data-aos="fade-up" data-aos-delay="300">
+        <h3>Faculty Relations</h3>
+        <p>Be respectful to professors. Good relations can help with attendance, projects, and recommendations.</p>
+      </div>
+      <div class="tip-card" data-aos="fade-up" data-aos-delay="400">
+        <h3>Smart Study</h3>
+        <p>Focus on PYQs, assignments, and concepts explained in class. Avoid wasting time on unnecessary syllabus.</p>
+      </div>
+      <div class="tip-card" data-aos="fade-up" data-aos-delay="500">
+        <h3>Resume Building</h3>
+        <p>Document every event, project, and skill. Update your resume every semester to track growth!</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>

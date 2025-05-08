@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BrainHub2 Notes</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+    }
+
+    .notes-section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .notes-section h2 {
+      text-align: center;
+      font-size: 2.8rem;
+      color: #00f0ff;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px #00f0ff;
+    }
+
+    .notes-section p {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-bottom: 40px;
+    }
+
+    .notes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .note-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 15px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 0 12px rgba(0, 229, 255, 0.3);
+      transition: 0.4s ease;
+      cursor: pointer;
+    }
+
+    .note-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0, 229, 255, 0.6);
+    }
+
+    .note-card h3 {
+      color: #00e5ff;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .note-card p {
+      font-size: 0.95rem;
+      color: #bbb;
+    }
+
+    .note-card a {
+      color: #00e5ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .notes-section h2 {
+        font-size: 2rem;
+      }
+
+      .note-card h3 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="notes-section" id="notes">
+    <h2>📝 Study Notes Collection</h2>
+    <p>Find the best notes for all semesters, curated to help you ace your exams!</p>
+
+    <div class="notes-grid">
+      <div class="note-card" data-aos="zoom-in">
+        <h3>Semester 1 - Programming</h3>
+        <p>Includes C, Python basics, flowcharts & intro to logic building.</p>
+        <a href="https://cse.iitkgp.ac.in/~pallab/PDS-2011-SPRING/Lec-1c.pdf">Download PDF</a>
+      </div>
+      <div class="note-card" data-aos="zoom-in" data-aos-delay="100">
+        <h3>Semester 2 - Web Tech</h3>
+        <p>HTML, CSS, JS, Bootstrap notes and mini project structure included.</p>
+        <a href="#">Download PDF</a>
+      </div>
+      <div class="note-card" data-aos="zoom-in" data-aos-delay="200">
+        <h3>Operating Systems</h3>
+        <p>Notes include scheduling algorithms, memory management & more.</p>
+        <a href="#">Download PDF</a>
+      </div>
+      <div class="note-card" data-aos="zoom-in" data-aos-delay="300">
+        <h3>DBMS - Database Mgmt</h3>
+        <p>SQL queries, ER diagrams, normalization, and project schemas.</p>
+        <a href="#">Download PDF</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
