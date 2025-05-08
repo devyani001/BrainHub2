@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BrainHub2 YouTube Guide</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+    }
+
+    .youtube-section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .youtube-section h2 {
+      text-align: center;
+      font-size: 2.8rem;
+      color: #ff2ee3;
+      margin-bottom: 10px;
+      text-shadow: 0 0 12px #ff2ee3;
+    }
+
+    .youtube-section p {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-bottom: 40px;
+    }
+
+    .youtube-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .youtube-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 15px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 0 12px rgba(255, 46, 227, 0.3);
+      transition: 0.4s ease;
+      cursor: pointer;
+    }
+
+    .youtube-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 46, 227, 0.6);
+    }
+
+    .youtube-card h3 {
+      color: #ff2ee3;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .youtube-card p {
+      font-size: 0.95rem;
+      color: #bbb;
+    }
+
+    .youtube-card a {
+      color: #ff2ee3;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .youtube-section h2 {
+        font-size: 2rem;
+      }
+
+      .youtube-card h3 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="youtube-section" id="youtube">
+    <h2>📺 YouTube Study Guides</h2>
+    <p>Best handpicked YouTube channels and playlists to boost your understanding!</p>
+
+    <div class="youtube-grid">
+      <div class="youtube-card" data-aos="fade-up">
+        <h3>CodeWithHarry - Python</h3>
+        <p>Full Python Course for Beginners – Hindi. Best for semester & placement prep.</p>
+        <a href="https://www.youtube.com/playlist?list=PLu0W_9lII9aiL0kysYlfSOUgY5rNlOhUd" target="_blank">Watch Now</a>
+      </div>
+      <div class="youtube-card" data-aos="fade-up" data-aos-delay="100">
+        <h3>Apna College - DSA</h3>
+        <p>Ultimate DSA series in Java. Must-watch for interviews & problem solving.</p>
+        <a href="https://www.youtube.com/playlist?list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ" target="_blank">Watch Now</a>
+      </div>
+      <div class="youtube-card" data-aos="fade-up" data-aos-delay="200">
+        <h3>Gate Smashers - OS</h3>
+        <p>Detailed Operating System videos from scratch. Easy to follow for exams.</p>
+        <a href="https://www.youtube.com/playlist?list=PLmXKhU9FNesQnO4l4_b8ZkbU2zWyhFZcJ" target="_blank">Watch Now</a>
+      </div>
+      <div class="youtube-card" data-aos="fade-up" data-aos-delay="300">
+        <h3>CodeHelp - Web Dev</h3>
+        <p>HTML, CSS, JS & React from basics. Build projects and grow your skills.</p>
+        <a href="https://www.youtube.com/c/CodeHelpbyBabbar" target="_blank">Watch Now</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
+</html>
