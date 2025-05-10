@@ -1,346 +1,472 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Chokokutai&family=Permanent+Marker&family=Unica+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
 
-:root{
-    --white: #fff;
-    --black: #000; 
-    --lightBulue: #17a;
+body {
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(https://wallpaperaccess.com/full/4230797.jpg);
 }
 
-*{
+html,
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    scroll-behavior: smooth;
 }
 
-body{
-    
-    background: url('bg.jpg') no-repeat center center/cover;
-    backdrop-filter: blur(10px);
-    /* new add above */
+
+
+/* body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background: linear-gradient(to right, #0f0c29, #302b63, #24243e); /
+    color: #fff;
+    height: 100%;
+    overflow-y: scroll;
+} */
+
+
+header,
+image {
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: #00111a; */
+    /* background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)),url(https://images.collegedunia.com/public/reviewPhotos/369496/inbound6449048373204272265.jpg?mode=cover); */
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(https://wallpaperaccess.com/full/4230797.jpg);
+    /* background-image: url("https://wallpapercave.com/wp/wp3855137.jpg"); */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+
+/* NAVBAR */
+
+.bhlogo {
+    border: 2px solid none;
+    height: 120px;
+    width: 170px;
+    background-position: start;
+    /* margin-left: 100px; */
+}
+
+.nav-box {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid none;
+}
+
+.left {
+    align-items: center;
+}
+
+.right {
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid none;
+    align-items: center;
+}
+
+li {
+    margin: 0 20px;
+    list-style: none;
+    color: #fff;
+}
+
+.main-heading {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   /*for align text centre*/
+    text-align: center;
+    font-size: 62px;
+    background-color: transparent;
+}
+
+.fyheading {
+    font-size: 62px;
+}
+
+
+h1 {
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 479px) {
+    .fyheading {
+        font-size: 25px;
+    }
+}
+
+p {
+    font-size: 14px;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* NEW NAV BAR */
+
+@media (max-width : 991px) {
+    #offcanvasNavbar {
+        background-color: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+    }
+
+    .bhlogo {
+        border: 2px solid none;
+        height: 60px;
+        width: 80px;
+        background-position: start;
+        /* margin-left: 100px; */
+    }
+
+    header,
+    image {
+        min-height: 100vh;
+        width: 100%;
+        background: url("https://i.pinimg.com/736x/c9/12/b6/c912b67ae419070a1c4bb8552c1bc5c1.jpg");
+        /* background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)),url(https://images.collegedunia.com/public/reviewPhotos/369496/inbound6449048373204272265.jpg?mode=cover); */
+        /* background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)),url(https://wallpaperaccess.com/full/4230797.jpg); */
+        /* background-image: url("https://wallpapercave.com/wp/wp3855137.jpg"); */
+        background-size: cover;
+        background-position: center;
+        /* position: relative; */
+    }
+
+
+}
+
+
+
+/* 2nd page */
+
+/* 2nd page */
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    border: 1px solid #f44366;
+    background: #f44366;
+    transition: 1s;
+    color: white;
+}
+
+nav .fa {
+    display: none;
+    /*icon will be hidden for larger screen devices*/
+}
+
+.mycontainer {
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    gap: 20px;
+    border: 2px solid none;
+    /* margin-bottom: 200px; */
+    /* /    background-image: url("https://tse2.mm.bing.net/th?id=OIP.djs9mGfRplWKYqinBqqjjAHaDX&pid=Api&P=0&h=180"); */
+    /* background-image: url("https://wallpapercave.com/wp/wp3855137.jpg"); */
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("https://wallpaperaccess.com/full/4230797.jpg");
+    /* above img - 2nd page */
+    /* background-image: url("https://wallpaper.dog/large/20372204.jpg"); */
+    /* background-color: #2F4F4F;b;uish */
+    /* background-color: #daa520;/*yellowish */
+    /* background-color: #253342;off black */
+    /* background-color: #3d5a80;  */
+    /* background-color: #354F52; */
+    overflow: hidden;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.left-text {
+    flex-basis: 30%;
+    border: 2px solid none;
+    padding-top: 200px;
+}
+
+.heading {
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+}
+
+.subheading {
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+    font-family: "Sriracha", cursive;
+    font-size: 18px;
+}
+
+.gallary {
+    flex-basis: 50%;
+    display: grid;
+    margin-top: 70px;
+    gap: 8px;
+    /*row m gap aayegi*/
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 120px;
+}
+
+.box {
+    background-size: cover;
+    /*puri ki puri image dikhegi*/
+    background-position: top;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    background-color: #222;
+    background-blend-mode: hard-light;
+    transition: all 1s ease-in-out;
+    cursor: pointer;
 }
 
-.wrapper{
-    position: relative;
-    width: 750px;
-    height: 450px;
-    background: var(--white);
-    border: 2px solid var(--black);
-    border-radius: 10px;
-    box-shadow: 0 0 20px var(--black);
-    overflow: hidden;
-    /*new add*/
+.box:hover {
+    background-color: #999;
+    background-position: center;
+    box-shadow: 0 0 4px #fff;
+}
 
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+.row {
+    grid-row: span 2;
+}
+
+.col {
+    grid-column: span 2;
+}
+
+/* #box-2 {
+   
+    transition: 3s ease-in-out;
+} 
+
+#box-6 { 
+    transition: 2s ease-in-out;
+} */
+
+
+#box-8 {
+    grid-area: 3 / 3 / 5 / 4;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    background: transparent;
+    /* color: #daa520;  */
+    color: white;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    border: white;
+    transition: 0.5s;
+}
+
+button:hover {
+    /* HOT  */
+    /* display: none; */
+    background-color: transparent;
+    /* box-shadow: 0 0 4px red;  */
+    box-shadow: 0 0 4px none;
+    /* color: yellow; */
+    color: transparent;
+}
+
+/* Media Query for width <= 1024px */
+
+@media screen and (max-width: 1024px) {
+    .mycontainer {
+        flex-direction: column;
+    }
+
+    .gallary {
+        width: 100%;
+        padding-inline: 12px;
+        grid-auto-rows: 220px;
+    }
+
+    .box {
+        grid-row: span 1;
+        grid-column: span 3;
+    }
+}
+
+/* cards */
+
+.card:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline-primary:hover {
+    background-color: #0d6efd;
+    color: white;
 }
 
 
-.wrapper .form-box{
-    position: absolute;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
 
-.wrapper .form-box.login{
-    left: 0;
-    padding: 0 60px 0 40px;
-}
+/*  */
 
-.form-box h2{
-    margin-bottom: 10px;
-    position: relative;
-    font-size: 32px;
-    color: var(--black);
+
+/* 🌌 Laptop Guide Section Styles */
+.laptop-guide {
+    /* background-image: url('https://wallpaperaccess.com/full/4230797.jpg'); */
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(https://wallpaperaccess.com/full/4230797.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    color: #fff;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.form-box h2::after{
+/* 
+.laptop-guide::before {
     content: "";
     position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 4px;
-    background: var(--black);
+    top: -100px;
+    left: -100px;
+    width: 200%;
+    height: 200%;
+    /* background: radial-gradient(circle, rgba(79, 195, 247, 0.1), transparent); *
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(https://wallpaperaccess.com/full/4230797.jpg);
+    animation: floatGlow 10s infinite alternate ease-in-out;
+    z-index: 0;
+} */
+
+.laptop-guide::before {
+    content: none;
 }
 
-.form-box .input-box{
+
+@keyframes floatGlow {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-100px, 100px);
+    }
+}
+
+.guide-content {
     position: relative;
-    width: 100%;
-    height: 50px;
-    margin: 25px 0;
+    z-index: 1;
 }
 
-.input-box input{
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    color: var(--black);
-    font-size: 16px;
-    font-weight: 500;
-    border: none;
-    outline: none;
-    border-bottom: 2px solid var(--black);
-    transition: .5s;
-    padding-right: 23px;
+.guide-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #4fc3f7;
 }
 
-.input-box input:focus,
-.input-box input:valid{
-    border-bottom-color: var(--lightBulue);
+.guide-content p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
 }
 
-.input-box label{
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    font-size: 16px;
-    color: var(--black);
-    pointer-events: none;
-    transition: 0.5s;
-}
-
-
-.input-box input:focus~label,
-.input-box input:valid~label{
-    top: -5px;
-    color: var(--lightBulue);
-}
-
-
-.input-box i{
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    font-size: 18px;
-    transition: 0.5s;
-}
-
-.input-box input:focus~i,
-.input-box input:valid~i{
-    color: var(--lightBulue);
-}
-
-form button{
-    width: 100%;
-    height: 45px;
-    background-color: var(--black);
-    color: var(--white);
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-    transition: .3s;
-}
-
-form button:hover{
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-}
-
-form .linkTxt{
-    font-size: 14px;
-    color: var(--black);
-    text-align: center;
-    margin: 20px 0 10px;
-}
-
-.linkTxt p a{
-    color: blue;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.wrapper .form-box.login .animation{
-    transform: translateX(0);
-    transition: 0.7s ease;
-    opacity: 1;
-    filter: blur(0);
-    transition-delay: calc(.1s * var(--j));
-}
-
-
-.wrapper.active .form-box.login .animation{
-    transform: translateX(-120%);
-    opacity: 0;
-    filter: blur(10px);
-    transition-delay: calc(.1s * var(--i));
-}
-.wrapper .info-text{
-    position: absolute;
-    top: 0;
-    width: 50%;
-    height: 100%;
+.laptop-cards {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
-.wrapper .info-text.login{
-    right: 0;
-    text-align: right;
-    padding: 0 40px 60px 150px;
+.laptop-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 20px;
+    width: 260px;
+    box-shadow: 0 0 15px rgba(0, 150, 255, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    backdrop-filter: blur(8px);
+}
+
+.laptop-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(79, 195, 247, 0.5);
+}
+
+.laptop-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.laptop-card h3 {
+    color: #4fc3f7;
+    margin-bottom: 5px;
+}
+
+.laptop-card span {
+    font-size: 0.75rem;
+    color: #ccc;
+}
+
+.see-more-btn {
+    margin-top: 40px;
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #4fc3f7;
+    color: #000;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.see-more-btn:hover {
+    background-color: #03a9f4;
+}
+
+/* about text */
+
+.bigbackground {
+    text-align: center;
+    /* margin-top: 10px; */
 
 }
 
-.wrapper .info-text h2{
-    font-size: 36px;
-    color: var(--white);
-    line-height: 1.3;
-    text-transform: uppercase;
-}
-
-.wrapper .info-text p{
-    font-size: 19px;
-    color: var(--white);
-}
-
-
-.wrapper .info-text.login .animation{
-    transform: translateX(0);
-    opacity: 2;
-    filter: blur(0);
-    transition: 0.7s ease;
-    transition-delay: calc(.1s * var(--j));
-}
-.wrapper.active .info-text.login .animation{
-    transform: translateX(120px);
-    opacity: 0;
-    filter: blur(10px);
-    transition: 0.7s ease;
-    transition-delay: calc(.1s * var(--i));
-}
-.wrapper .rotate-bg{
-    position: absolute;
-    top: -4px;
-    right: 0;
-    width: 850px;
-    height: 600px;
-    background: #000;
-    transform: rotate(10deg) skewY(40deg);
-    transform-origin: bottom right;
-    transition: 1.5s ease;
-    transition-delay: 1.6s;
-}
-
-.wrapper.active .rotate-bg{
-    transform: rotate(0) skewY(0);
-    transition-delay: 0.5s;
-}
-
-.wrapper .form-box.register{
-    padding: 0 40px 0 60px;
-    right: 0;
-}
-
-.wrapper.active .form-box.register{
-    pointer-events: auto;
-}
-
-
-.wrapper .form-box.register .animation{
-    transform: translateX(120%);
-    opacity: 0;
-    filter: blur(10px);
-    transition: .7s ease;
-    transition-delay: calc(.1s * var(--j));
-}
-
-.wrapper.active .form-box.register .animation{
-    transform: translateX(0);
-    opacity: 1;
-    filter: blur(0);
-    transition-delay: calc(.1s * var(--i));
-}
-
-.wrapper .info-text.register{
-    left: 0;
-    text-align: left;
-    padding: 0 150px 60px 40px;
-    pointer-events: none;
-}
-
-.wrapper.active .info-text.register{
-    pointer-events: auto;
-}
-
-
-.wrapper .info-text.register .animation{
-    transform: translateX(-120%);
-    opacity: 0;
-    filter: blur(10px);
-    transition: .7s ease;
-    transition-delay: calc(.1s * var(--j));
-}
-
-.wrapper.active .info-text.register .animation{
-    transform: translateX(0);
-    opacity: 1;
-    filter: blur(0);
-    transition-delay: calc(.1s * var(--i));
-}
-
-.wrapper .rotate-bg2{
-    position: absolute;
-    top: 100%;
-    left: 250px;
-    width: 850px;
-    height: 700px;
-    background: var(--white);
-    transform: rotate(0) skewY(0);
-    transform-origin: bottom left;
-    transition: 1.5s ease;
-    transition-delay: 0.5s;
-}
-
-.wrapper.active .rotate-bg2{
-    transform: rotate(-11deg) skewY(-40deg);
-    transition-delay: 1.2s;
-}
-
-.toggle-password {
-    cursor: pointer;
-    position: absolute;
-    right: 25px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-form button:hover {
-    transform: scale(1.05);
-    background: linear-gradient(to right, #000, #222);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
-}
-
-@media (max-width: 768px) {
-    .wrapper {
-        flex-direction: column;
-        width: 90%;
-        height: auto;
-    }
-
-    .wrapper .form-box,
-    .wrapper .info-text {
-        width: 100%;
-        padding: 30px;
-        text-align: center;
-    }
-
-    .rotate-bg {
-        display: none;
-    }
-}
+.background {
+    margin: 40px 30px 0 30px;
+    padding-bottom: 0px;
+    font-family: "Unica One", sans-serif;
+    text-shadow: 0 0 5px #2b2122c5, 0 0 25px #2b2122c5, 0 0 50px #2b2122c5, 0 0 100px #2b2122c5;
+    color: white;
+    font-size: 18px;
+    word-spacing: 2px;
