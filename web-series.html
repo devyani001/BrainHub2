@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Engineering Web Series</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e1e2f, #111121);
+            color: #f0f0f0;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .hero {
+            padding: 60px 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid #00c9a7;
+            padding-left: 10px;
+            margin: 40px 0 20px;
+        }
+
+        .card {
+            background-color: #222233;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: scale(1.04);
+        }
+
+        .card-img-top {
+            height: 160px;
+            object-fit: cover;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            color: #00c9a7;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background-color: #00c9a7;
+            border: none;
+            font-size: 0.9rem;
+            padding: 6px 12px;
+        }
+
+        .btn-primary:hover {
+            background-color: #00b39f;
+        }
+
+        .tag {
+            font-size: 0.7rem;
+            background: #333;
+            color: #00c9a7;
+            padding: 3px 8px;
+            border-radius: 12px;
+            margin-right: 5px;
+        }
+
+        .series-row {
+            justify-content: center;
+        }
+
+        @media (min-width: 768px) {
+            .card {
+                width: 220px;
+                margin: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Hero -->
+    <div class="hero">
+        <h1>🎬 Best Web Series for Engineering Students</h1>
+        <p class="text-muted">Motivation, Drama, Hustle, Fun – All in One Place!</p>
+    </div>
+
+    <div class="container">
+
+        <!-- CATEGORY TEMPLATE -->
+        <!-- Repeat for each category -->
+
+        <div class="category-title">
+            <h2>🏫 IIT Life</h2>
+        </div>
+        <br>
+        <div class="row g-4 series-row">
+            <!-- Card 1 -->
+            <div class="col-6 col-md-3">
+                <div class="card">
+                    <img src="https://i.ytimg.com/vi/pNZQ6msbOvM/maxresdefault.jpg" class="card-img-top"
+                        alt="Kota Factory">
+                    <div class="card-body">
+                        <h5 class="card-title">Kota Factory</h5>
+                        <p><span class="tag">IIT</span> <span class="tag">Black & White</span></p>
+                        <a href="https://youtube.com" target="_blank" class="btn btn-primary">Watch</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat same card 3 times (replace image/title/links later) -->
+            <div class="col-6 col-md-3">
+                <div class="card">
+                    <img src="https://placehold.co/300x160" class="card-img-top" alt="Series">
+                    <div class="card-body">
+                        <h5 class="card-title">Another IIT Show</h5>
+                        <p><span class="tag">Exam</span> <span class="tag">JEE</span></p>
+                        <a href="#" class="btn btn-primary">Watch</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card">
+                    <img src="https://placehold.co/300x160" class="card-img-top" alt="Series">
+                    <div class="card-body">
+                        <h5 class="card-title">Prep Diaries</h5>
+                        <p><span class="tag">IIT</span> <span class="tag">Pressure</span></p>
+                        <a href="#" class="btn btn-primary">Watch</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card">
+                    <img src="https://placehold.co/300x160" class="card-img-top" alt="Series">
+                    <div class="card-body">
+                        <h5 class="card-title">JEE Story</h5>
+                        <p><span class="tag">Study</span> <span class="tag">Coaching</span></p>
+                        <a href="#" class="btn btn-primary">Watch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- College Life -->
+        <div class="category-title">
+            <h2 style="margin: 150px 0 0 0;">🎓 College Life</h2>
+        </div>
+        <br>
+        <div class="row g-4 series-row">
+            <!-- Repeat card 4 times like above -->
+            <div class="col-6 col-md-3">
+                <div class="card">
+                    <img src="https://i.ytimg.com/vi/gcY9me_zH_0/maxresdefault.jpg" class="card-img-top"
+                        alt="Engineering Girls">
+                    <div class="card-body">
+                        <h5 class="card-title">Engineering Girls</h5>
+                        <p><span class="tag">Girls' College</span><span class="tag">Fun</span><span
+                                class="tag">Relatable</span></p>
+                        <a href="https://www.youtube.com/playlist?list=PLTB0eCoUXErYK5U9m34L2Nn0yq0KQJZar"
+                            class="btn btn-primary" target="_blank">Watch Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card">
+                    <img src="https://i.ytimg.com/vi/gcY9me_zH_0/maxresdefault.jpg" class="card-img-top"
+                        alt="Engineering Girls">
+                    <div class="card-body">
+                        <h5 class="card-title">Engineering Girls</h5>
+                        <p><span class="tag">Fun</span> <span class="tag">Hostel</span></p>
+                        <a href="https://youtube.com" target="_blank" class="btn btn-primary">Watch</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card">
+                    <img src="https://i.ytimg.com/vi/gcY9me_zH_0/maxresdefault.jpg" class="card-img-top"
+                        alt="Engineering Girls">
+                    <div class="card-body">
+                        <h5 class="card-title">Engineering Girls</h5>
+                        <p><span class="tag">Fun</span> <span class="tag">Hostel</span></p>
+                        <a href="https://youtube.com" target="_blank" class="btn btn-primary">Watch</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card">
+                    <img src="https://i.ytimg.com/vi/gcY9me_zH_0/maxresdefault.jpg" class="card-img-top"
+                        alt="Engineering Girls">
+                    <div class="card-body">
+                        <h5 class="card-title">Engineering Girls</h5>
+                        <p><span class="tag">Fun</span> <span class="tag">Hostel</span></p>
+                        <a href="https://youtube.com" target="_blank" class="btn btn-primary">Watch</a>
+                    </div>
+                </div>
+            </div>
+            <!-- +3 more dummy cards -->
+        </div>
+
+        <!-- Startup -->
+        <div class="category-title">
+            <h2 style="margin: 150px 0 0 0;">🚀 Startup & Hustle</h2>
+        </div>
+        <br>
+        <div class="row g-4 series-row">
+            <!-- TVF Pitchers and 3 more -->
+            <div class="col-6 col-md-3">
+                <div class="card">
+                    <img src="https://i.ytimg.com/vi/LMagNcngvcU/maxresdefault.jpg" class="card-img-top"
+                        alt="TVF Pitchers">
+                    <div class="card-body">
+                        <h5 class="card-title">TVF Pitchers</h5>
+                        <p><span class="tag">Startups</span><span class="tag">Career</span><span
+                                class="tag">Motivational</span></p>
+                        <a href="https://tvfplay.com/shows/pitchers" class="btn btn-primary" target="_blank">Watch
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card">
+                    <img src="https://i.ytimg.com/vi/gcY9me_zH_0/maxresdefault.jpg" class="card-img-top"
+                        alt="Engineering Girls">
+                    <div class="card-body">
+                        <h5 class="card-title">Engineering Girls</h5>
+                        <p><span class="tag">Fun</span> <span class="tag">Hostel</span></p>
+                        <a href="https://youtube.com" target="_blank" class="btn btn-primary">Watch</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card">
+                    <img src="https://i.ytimg.com/vi/gcY9me_zH_0/maxresdefault.jpg" class="card-img-top"
+                        alt="Engineering Girls">
+                    <div class="card-body">
+                        <h5 class="card-title">Engineering Girls</h5>
+                        <p><span class="tag">Fun</span> <span class="tag">Hostel</span></p>
+                        <a href="https://youtube.com" target="_blank" class="btn btn-primary">Watch</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card">
+                    <img src="https://i.ytimg.com/vi/gcY9me_zH_0/maxresdefault.jpg" class="card-img-top"
+                        alt="Engineering Girls">
+                    <div class="card-body">
+                        <h5 class="card-title">Engineering Girls</h5>
+                        <p><span class="tag">Fun</span> <span class="tag">Hostel</span></p>
+                        <a href="https://youtube.com" target="_blank" class="btn btn-primary">Watch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gen-Z -->
+        <div class="category-title">
+            <h2 style="margin: 150px 0 0 0;">🌀 Gen-Z Vibes</h2>
+        </div>
+        <hr>
+        <div class="row g-4 series-row">
+            <!-- Campus Diaries and 3 more -->
+            <div class="col-6 col-md-3">
+                <div class="card">
+                    <img src="https://i.ytimg.com/vi/1WnSF5bHOUk/maxresdefault.jpg" class="card-img-top"
+                        alt="Campus Diaries">
+                    <div class="card-body">
+                        <h5 class="card-title">Campus Diaries</h5>
+                        <p><span class="tag">Drama</span><span class="tag">Gen-Z</span><span
+                                class="tag">Friendship</span></p>
+                        <a href="https://www.mxplayer.in/show/watch-campus-diaries/season-1/episode-1-online-239eaf91d14c85f5fb40b305f602274b"
+                            class="btn btn-primary" target="_blank">Watch Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card">
+                    <img src="https://i.ytimg.com/vi/gcY9me_zH_0/maxresdefault.jpg" class="card-img-top"
+                        alt="Engineering Girls">
+                    <div class="card-body">
+                        <h5 class="card-title">Engineering Girls</h5>
+                        <p><span class="tag">Fun</span> <span class="tag">Hostel</span></p>
+                        <a href="https://youtube.com" target="_blank" class="btn btn-primary">Watch</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card">
+                    <img src="https://i.ytimg.com/vi/gcY9me_zH_0/maxresdefault.jpg" class="card-img-top"
+                        alt="Engineering Girls">
+                    <div class="card-body">
+                        <h5 class="card-title">Engineering Girls</h5>
+                        <p><span class="tag">Fun</span> <span class="tag">Hostel</span></p>
+                        <a href="https://youtube.com" target="_blank" class="btn btn-primary">Watch</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card">
+                    <img src="https://i.ytimg.com/vi/gcY9me_zH_0/maxresdefault.jpg" class="card-img-top"
+                        alt="Engineering Girls">
+                    <div class="card-body">
+                        <h5 class="card-title">Engineering Girls</h5>
+                        <p><span class="tag">Fun</span> <span class="tag">Hostel</span></p>
+                        <a href="https://youtube.com" target="_blank" class="btn btn-primary">Watch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pressure -->
+        <div class="category-title">
+            <h2 style="margin: 150px 0 0 0;">🧠 Dropout & Pressure</h2>
+        </div>
+        <br>
+        <div class="row g-4 series-row">
+            <!-- Laakhon Mein Ek and 3 more -->
+            <div class="col-6 col-md-3">
+                <div class="card">
+                    <img src="https://i.ytimg.com/vi/cjAvGxYHnr4/maxresdefault.jpg" class="card-img-top"
+                        alt="Laakhon Mein Ek">
+                    <div class="card-body">
+                        <h5 class="card-title">Laakhon Mein Ek</h5>
+                        <p><span class="tag">Dropout</span><span class="tag">Mental Health</span><span class="tag">Dark
+                                Truth</span></p>
+                        <a href="https://www.primevideo.com/detail/0K66KQPLK0FAZLYTWWSYICDFT7/" class="btn btn-primary"
+                            target="_blank">Watch Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card">
+                    <img src="https://i.ytimg.com/vi/gcY9me_zH_0/maxresdefault.jpg" class="card-img-top"
+                        alt="Engineering Girls">
+                    <div class="card-body">
+                        <h5 class="card-title">Engineering Girls</h5>
+                        <p><span class="tag">Fun</span> <span class="tag">Hostel</span></p>
+                        <a href="https://youtube.com" target="_blank" class="btn btn-primary">Watch</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card">
+                    <img src="https://i.ytimg.com/vi/gcY9me_zH_0/maxresdefault.jpg" class="card-img-top"
+                        alt="Engineering Girls">
+                    <div class="card-body">
+                        <h5 class="card-title">Engineering Girls</h5>
+                        <p><span class="tag">Fun</span> <span class="tag">Hostel</span></p>
+                        <a href="https://youtube.com" target="_blank" class="btn btn-primary">Watch</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card">
+                    <img src="https://i.ytimg.com/vi/gcY9me_zH_0/maxresdefault.jpg" class="card-img-top"
+                        alt="Engineering Girls">
+                    <div class="card-body">
+                        <h5 class="card-title">Engineering Girls</h5>
+                        <p><span class="tag">Fun</span> <span class="tag">Hostel</span></p>
+                        <a href="https://youtube.com" target="_blank" class="btn btn-primary">Watch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Back to Home Button -->
+    <div id="backButtonContainer" style="position: fixed; bottom: 20px; right: 20px; z-index: 999;">
+        <button id="backHomeBtn" class="btn btn-outline-light px-4 py-2" style="border-radius: 30px; font-weight: 600;">
+            ⬅ Back to Home
+        </button>
+    </div>
+
+    <!-- Transition Overlay with Fun Animation -->
+    <div id="transitionOverlay"
+        style="display: none; position: fixed; inset: 0; background: linear-gradient(135deg, #00c9a7, #005f5f); z-index: 998; justify-content: center; align-items: center; color: white; font-size: 2rem; font-weight: bold; text-align: center;">
+        <div class="loader" style="font-size: 3rem; animation: spin 2s linear infinite;">🔄</div>
+        <div class="mt-3" style="animation: fadeIn 2s ease-out;">Redirecting you back home...</div>
+        <div class="progress mt-4" style="width: 200px; height: 10px;">
+            <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0"
+                aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+
+    <script>
+        const backBtn = document.getElementById('backHomeBtn');
+        const overlay = document.getElementById('transitionOverlay');
+        const progressBar = document.getElementById('progressBar');
+
+        backBtn.addEventListener('click', () => {
+            // Fade out cards
+            document.querySelectorAll('.card').forEach(card => {
+                card.style.transition = 'opacity 0.5s ease';
+                card.style.opacity = 0;
+            });
+
+            // Show overlay after fade
+            setTimeout(() => {
+                overlay.style.display = 'flex';
+
+                // Simulate progress
+                let progress = 0;
+                const interval = setInterval(() => {
+                    if (progress >= 100) {
+                        clearInterval(interval);
+                    } else {
+                        progress += 2;
+                        progressBar.style.width = `${progress}%`;
+                    }
+                }, 100);
+
+            }, 500);
+
+            // Redirect after delay
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 2000); // Longer to show progress bar animation
+        });
+    </script>
+
+    <style>
+        #backHomeBtn {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 0 10px #00c9a7;
+        }
+
+        #backHomeBtn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #00c9a7;
+        }
+
+        /* Animation for Spinner */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Fade-in effect for text */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Custom styling for progress bar */
+        .progress-bar {
+            background-color: #00c9a7;
+            border-radius: 50px;
+            height: 10px;
+        }
+    </style>
+
+
+
+</body>
+
+</html>

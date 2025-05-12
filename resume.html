@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume Builder | BrainHub</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 25px;
+      color: #ffcc70;
+    }
+
+    input[type="text"], input[type="email"], input[type="number"], textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      background: #ffffffcc;
+      color: #000;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 8px 5px;
+      background: #ffb347;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: #ffcc70;
+    }
+
+    #result {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 22px;
+      font-weight: 600;
+      color: #00ffcc;
+    }
+
+    .resume-preview {
+      background: white;
+      color: #000;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .resume-preview h2 {
+      text-align: center;
+      color: #ffcc70;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .section-content {
+      margin-left: 20px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>📝 Resume Builder</h1>
+    <form id="resumeForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" placeholder="Enter your full name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="phone">Phone:</label>
+      <input type="number" id="phone" placeholder="Enter your phone number" required>
+
+      <label for="skills">Skills:</label>
+      <textarea id="skills" rows="4" placeholder="Enter your skills, separated by commas" required></textarea>
+
+      <label for="experience">Experience:</label>
+      <textarea id="experience" rows="4" placeholder="Enter your experience, if any" required></textarea>
+
+      <label for="education">Education:</label>
+      <textarea id="education" rows="4" placeholder="Enter your education details" required></textarea>
+
+      <button type="submit">Preview Resume</button>
+    </form>
+
+    <div id="result"></div>
+    <div id="resumePreview" class="resume-preview" style="display:none;">
+      <h2>Resume Preview</h2>
+      <div id="previewContent"></div>
+      <button id="downloadBtn" style="display:none;">Download Resume</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("resumeForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const skills = document.getElementById("skills").value;
+      const experience = document.getElementById("experience").value;
+      const education = document.getElementById("education").value;
+
+      // Resume Preview HTML
+      const previewContent = `
+        <h3>${name}</h3>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        
+        <div class="section-title">Skills</div>
+        <div class="section-content">${skills}</div>
+        
+        <div class="section-title">Experience</div>
+        <div class="section-content">${experience}</div>
+        
+        <div class="section-title">Education</div>
+        <div class="section-content">${education}</div>
+      `;
+
+      // Show preview content
+      document.getElementById("previewContent").innerHTML = previewContent;
+      document.getElementById("resumePreview").style.display = "block";
+      document.getElementById("downloadBtn").style.display = "inline-block";
+    });
+
+    // Download the resume as a PDF
+    document.getElementById("downloadBtn").addEventListener("click", function() {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const skills = document.getElementById("skills").value;
+      const experience = document.getElementById("experience").value;
+      const education = document.getElementById("education").value;
+
+      // Adding content to the PDF
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(22);
+      doc.text(name, 105, 10, { align: "center" });
+      
+      doc.setFontSize(12);
+      doc.text(`Email: ${email}`, 20, 30);
+      doc.text(`Phone: ${phone}`, 20, 40);
+
+      doc.setFontSize(14);
+      doc.text("Skills:", 20, 60);
+      doc.setFontSize(12);
+      doc.text(skills, 20, 70);
+
+      doc.setFontSize(14);
+      doc.text("Experience:", 20, 90);
+      doc.setFontSize(12);
+      doc.text(experience, 20, 100);
+
+      doc.setFontSize(14);
+      doc.text("Education:", 20, 120);
+      doc.setFontSize(12);
+      doc.text(education, 20, 130);
+
+      // Save the PDF file
+      doc.save(`${name}_Resume.pdf`);
+    });
+  </script>
+
+</body>
+</html>

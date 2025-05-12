@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CGPA & SGPA Calculator | BrainHub</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+    }
+
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      transition: 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: #ffcc70;
+    }
+
+    .container {
+      max-width: 550px;
+      margin: 60px auto;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 25px;
+      color: #ffcc70;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      background: #ffffffcc;
+      color: #000;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 8px 5px;
+      background: #ffb347;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: #ffcc70;
+    }
+
+    #result {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 22px;
+      font-weight: 600;
+      color: #00ffcc;
+    }
+
+    .back-btn {
+      background: transparent;
+      border: 2px solid #ffb347;
+      color: #ffb347;
+      padding: 8px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: #ffb347;
+      color: #000;
+    }
+
+    #sgpaResult {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: 600;
+      color: #ffcc70;
+    }
+
+    #cgpaResult {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 22px;
+      font-weight: 600;
+      color: #00ffcc;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="index.html" class="back-btn">⬅ Back to Home</a>
+  </div>
+
+  <div class="container">
+    <h1>🎓 CGPA & SGPA Calculator</h1>
+    <form id="cgpaForm">
+      <div id="inputFields">
+        <input type="number" step="0.01" placeholder="Enter SGPA for Sem 1" class="sgpa-input" required />
+      </div>
+      <button type="button" onclick="addField()">➕ Add Semester</button>
+      <button type="submit">Calculate CGPA</button>
+    </form>
+
+    <div id="sgpaResult"></div>
+    <div id="cgpaResult"></div>
+  </div>
+
+  <script>
+    // Function to add new input field for more semesters
+    function addField() {
+      const inputFields = document.getElementById("inputFields");
+      const count = inputFields.children.length + 1;
+
+      const newField = document.createElement("input");
+      newField.type = "number";
+      newField.step = "0.01";
+      newField.placeholder = `Enter SGPA for Sem ${count}`;
+      newField.className = "sgpa-input";
+      newField.required = true;
+
+      inputFields.appendChild(newField);
+    }
+
+    // Handle form submission to calculate CGPA and SGPA
+    document.getElementById("cgpaForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const inputs = document.querySelectorAll(".sgpa-input");
+      let totalSGPA = 0;
+      let totalCredits = 0;
+
+      // Calculate total SGPA and credits (assuming 1 credit per semester for simplicity)
+      inputs.forEach(input => {
+        const sgpa = parseFloat(input.value);
+        totalSGPA += sgpa;
+        totalCredits++;
+      });
+
+      // Calculate SGPA for the current semester (totalSGPA / totalCredits)
+      const sgpa = (totalSGPA / totalCredits).toFixed(2);
+      document.getElementById("sgpaResult").textContent = `📚 Your SGPA is: ${sgpa}`;
+
+      // Calculate CGPA by averaging all entered SGPA values
+      const cgpa = (totalSGPA / totalCredits).toFixed(2);
+      document.getElementById("cgpaResult").textContent = `🎉 Your CGPA is: ${cgpa}`;
+    });
+  </script>
+
+</body>
+</html>
