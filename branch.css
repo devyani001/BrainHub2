@@ -31,14 +31,25 @@ img{
 h2{
     color: #fff;
     text-shadow: 1px 1px 2px red;
-    /* border: 1px solid green; */
+    /* border: 1px solid green;*/ 
     padding: 50px 0 20px 0;
 
 }
 
+h3{
+    color: #fff;
+    text-shadow: 1px 1px 2px navy;
+    /* border: 1px solid green;*/ 
+    padding: 10px 0 10px 100px;
+
+}
+
 .back_button{
-    margin: 100px 0;
+    margin-top: 100px;
     text-align: center;
+     color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
 }
 
 .back_button:hover {
@@ -46,4 +57,10 @@ h2{
     color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 5px #03f484, 0 0 25px #03f484, 0 0 50px #03f484, 0 0 100px #03f484;
+} */
+
+.btn{
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
 }

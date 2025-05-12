@@ -1,0 +1,574 @@
+/* bh fonts */
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Permanent+Marker&family=Unica+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Chokokutai&family=Permanent+Marker&family=Unica+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Chokokutai&family=Permanent+Marker&family=Unica+One&display=swap');
+
+* {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body { 
+    /* background-color: #2F4F4F; */
+    /* background-color: #312e2e; */
+    /* background-color: #00072d; */
+    /* background-image: url("https://tse2.mm.bing.net/th?id=OIP.djs9mGfRplWKYqinBqqjjAHaDX&pid=Api&P=0&h=180"); */
+    font-family: 'poppins', sans-serif;
+} 
+  
+/* 1st page */
+
+.header{
+    /* overflow: hidden; */
+
+}
+nav .fa {
+    display: none;
+}
+
+.header , image {
+    min-height: 100vh; 
+    width: 100%;
+    /* background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)),url(https://images.collegedunia.com/public/reviewPhotos/369496/inbound6449048373204272265.jpg?mode=cover); */
+    /* background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)),url(https://wallpaperaccess.com/full/4230797.jpg); */
+    background-image: url("https://wallpapercave.com/wp/wp3855137.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+nav{
+    border: 1px solid none;
+    display: flex;
+    padding: 0px 40px; 
+    justify-content: space-between;
+    align-items: center;
+}   
+ 
+.logo {
+    border: 2px solid none;
+    height: 120px;     
+    width: 170px; 
+    background-position: start;
+}  
+
+.left-side{
+    color: #fff;
+    border: 1px solid none;
+    
+    font-family: "Jacquard 12", system-ui;
+    /* font-weight: 400; */
+    font-size: 50px;
+    margin-left: 170px;
+    letter-spacing: 1px;
+}
+  
+.navbar { 
+    border: 2px solid none; 
+    flex: 1;
+    align-self: start;
+    text-align: right; 
+} 
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 30px 12px;
+    position: relative;
+    border: 2px solid none;
+    
+} 
+
+.navbar ul li a {
+    color: #fff; 
+    /* color: #60798e; */
+    text-decoration: none; 
+}
+
+.navbar ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    /* background: #03f484; */
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.main-text{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%,-50%);/*for align text centre*/
+    text-align: center;
+}
+
+.main-text h1 {
+    font-size: 62px;
+} 
+
+.main-text p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.burger{
+    /* width: 100px; */
+    display: none;
+}
+
+#toggle{
+    color: transparent;
+}
+
+.menu-anchor {
+    /* color: #03f484; */
+}
+
+nav .fa{
+    display: none;/*icon will be hidden for larger screen devices*/
+}
+
+/* 2nd page */
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover{
+    border: 1px solid #f44366; 
+    background: #f44366;
+    transition: 1s; 
+    color: white;
+}
+
+nav .fa{
+    display: none;/*icon will be hidden for larger screen devices*/
+}
+
+.container { 
+    box-sizing: border-box; 
+    min-height: 100vh;  
+    display: flex; 
+    justify-content: space-evenly; 
+    text-align: center;   
+    gap: 20px;  
+    border: 2px solid none;
+    /* margin-bottom: 200px; */
+/* /    background-image: url("https://tse2.mm.bing.net/th?id=OIP.djs9mGfRplWKYqinBqqjjAHaDX&pid=Api&P=0&h=180"); */
+/* background-image: url("https://wallpapercave.com/wp/wp3855137.jpg"); */
+background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)),url("https://wallpaperaccess.com/full/4230797.jpg");
+/* above img - 2nd page */
+    /* background-image: url("https://wallpaper.dog/large/20372204.jpg"); */
+    /* background-color: #2F4F4F;b;uish */
+    /* background-color: #daa520;/*yellowish */
+    /* background-color: #253342;off black */
+    /* background-color: #3d5a80;  */
+    /* background-color: #354F52; */
+    overflow: hidden;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+ 
+.left-text {
+    flex-basis: 30%;
+    border: 2px solid none;
+    padding-top: 200px;
+}
+
+.heading {
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+}
+
+.subheading {
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+    font-family: "Sriracha", cursive;
+    font-size: 18px;
+}
+
+.gallary {
+    flex-basis: 50%;
+    display: grid;
+    margin-top: 70px;
+    gap: 8px;/*row m gap aayegi*/
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 120px;
+} 
+  
+.box { 
+    background-size: cover;/*puri ki puri image dikhegi*/
+    background-position: top;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: #222;
+    background-blend-mode: hard-light;
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+}   
+ 
+.box:hover {  
+    background-color: #999;  
+    background-position: center;
+    box-shadow: 0 0 4px #fff;
+} 
+
+.row {   
+    grid-row: span 2;
+} 
+ 
+.col { 
+    grid-column: span 2;
+}  
+
+/* #box-2 {
+   
+    transition: 3s ease-in-out;
+} 
+
+#box-6 { 
+    transition: 2s ease-in-out;
+} */
+
+
+#box-8 { 
+    grid-area: 3 / 3 / 5 /  4; 
+} 
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    background: transparent;
+    /* color: #daa520;  */ 
+    color: white;
+    font-size: 16px; 
+    font-weight: 800; 
+    letter-spacing: 1px;
+    border: white; 
+    transition: 0.5s;  
+}    
+   
+button:hover{    
+    /* HOT  */
+    /* display: none; */
+    background-color: transparent; 
+    /* box-shadow: 0 0 4px red;  */
+    box-shadow: 0 0 4px none;
+    /* color: yellow; */
+    color: transparent;
+}
+
+/* 3rd page */
+/* 
+.videobg{
+    /* width: 100%; *
+    height: 100vh;
+    background-image: url("vdobg.jpg");
+    background-size: cover;
+    background-position: center;
+    
+}
+
+video{
+    height: 270px;
+    width: 500px;
+    /* border: 1px solid salmon; *
+    margin: 70px 0 0 200px;
+    
+}
+
+.bigbackground {
+    text-align: center;
+    /* margin-top: 10px; *
+    margin-top: 150px;
+}
+
+.background {
+    margin-bottom: 30px;
+    /* border: 2px springgreen dashed; *
+    padding-bottom: 0px;
+    font-family: "Unica One", sans-serif;
+    text-shadow: 0 0 5px #03f484, 0 0 25px #03f484, 0 0 50px #03f484, 0 0 100px #03f484;
+    color: white;
+    font-size: 18px;
+    word-spacing: 2px;
+} */
+
+
+
+
+
+
+
+
+
+/* 3rd page */
+
+.videobg{
+    /* width: 100%; */
+    height: 100vh;
+    background-image: url("vdobg.jpg");
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.last-page{
+    background-image: url("f0f4eead-3616-462f-b3ae-0b1966110914.jpg");
+     background-size: cover;
+     /* background-position: center; */
+     height: 740px;
+     width: 100%;
+     display: flex;
+     flex-wrap: wrap;
+ }
+ 
+ video {
+     width: 500px; 
+     height:500px; 
+     /* padding-top:0px;  */
+     padding-bottom:230px;
+     margin-left: 210px;
+     margin-top: 70px;
+ }
+ 
+ .footer {
+     width: 100%;
+     height: 750px;
+     /* text-align: center; */
+     padding: 0px 0;
+     border: 2px solid none;
+ }
+ 
+ .smallbox{
+     
+ }
+ 
+ .bigbackground {
+     text-align: center;
+     /* margin-top: 10px; */
+     
+ }
+ 
+ .background {
+    margin-top: 30px;
+    padding-bottom: 0px;
+    font-family: "Unica One", sans-serif;
+    text-shadow: 0 0 5px #03f484, 0 0 25px #03f484, 0 0 50px #03f484, 0 0 100px #03f484;
+    color: white;
+    font-size: 18px;
+    word-spacing: 2px;
+ }
+ 
+
+
+/* FOOTER */
+
+.footerbg{
+    background-color: #001c32;
+    height: 30vh;
+}
+
+.doubt{
+    font-size: 18px; 
+    text-align: center;
+    color: #60798e;
+    padding: 50px 0 40px 0;
+    font-family: "playfair Display";
+}
+
+.follow{
+    color: #60798e;
+    border: 1px solid none;
+    text-align: center;
+}
+
+.follow i{
+    cursor: pointer;
+    padding: 0 16px;
+    border: 1px solid none;
+    /* border-radius: 50%; */
+    text-shadow: 0 0 5px #60798e, 0 0 25px #60798e, 0 0 50px #60798e, 0 0 100px #60798e;
+}
+
+.owner-name{
+    border: 3px solid none;
+    margin-top: 30px;
+    text-align: center;
+    color: #60798e;
+    font-family: "playfair Display";
+}
+
+.linkdin{
+    color: blue;
+}
+
+
+
+/* about page */
+
+.sub-header {
+    height: 50vh;
+    width: 100%;
+    /* background-image: url("about_us_wallpaper.jpeg"); */
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+
+.aboutpage img{ 
+    width: 100%;
+    height: 500px;
+    /* padding-left: 20px; */
+    /* padding-right: 20px; */
+     
+} 
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+} 
+.about-col{
+    flex-basis: 50%;
+    /* position: absolute; */
+    /* right: 5px; */
+}
+.about-col img{
+    
+    width: 100%;
+}
+#left1{
+    padding-left: 150px;
+}
+#right1{
+    padding-right: 150px;
+}
+
+.aboutpage-header{
+    border: 1px solid red;
+    height: 500px;
+    width: 100%;
+    /* background: url("a-dark-and-moody-background-cover-image-set-in-a-m-zXIG6lGdTrSLK6YlRh3wRA-XkcFXfQWQmiGuumT8GO49Q.jpeg"); */
+    /* background-position:center; */
+    background-size: cover;
+
+}
+
+.about-container img{
+    border: 1px solid green;
+    height: 500px;
+    width: 100%;
+    /* background: url("a-dark-and-moody-background-cover-image-set-in-a-m-zXIG6lGdTrSLK6YlRh3wRA-XkcFXfQWQmiGuumT8GO49Q.jpeg"); */
+    background-position:center;
+    background-size: cover;
+}
+
+.outer-about{
+    background-color: #edf2fb;
+    margin-top: 120px;
+}
+
+.about-us-text {
+    position: absolute; 
+    color:#fff; 
+    top: 200px;
+    left: 250px; 
+    font-size: 35px;
+    color: white;
+    text-shadow: 5px 7px 5px #001c32;
+}
+
+.our-mission-line{
+    border: 1px solid none;
+    /* margin: 0 10px; */
+    padding-right: 150px;
+}
+
+
+/* contact us page */
+
+
+/* contact us page */
+
+.location {
+    width: 80%;
+    margin: auto;
+    padding: 50px 0;
+}
+
+.location iframe {
+    width: 100%;
+}
+
+.contact-us {
+    width: 80%;
+    margin: auto;
+}
+ 
+.contact-col {
+    flex-basis: 48%;
+    margin-bottom: 30px;
+    padding-top: 10px;
+}
+
+.contact-col div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+ 
+.contact-col div .fa{
+    /* font-size: 28px; */
+    /* color: #f44336;  */
+    /* margin: 10px;  */
+    /* margin-right: 3000px; */
+    /* padding-right: 20px; */ 
+}
+
+.contact-col div p{
+    padding: 0;
+}
+
+.contact-col div h5{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+}
+
+.contact-col input, .contact-col textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none; 
+    border: 1px solid #ccc; 
+    box-sizing: border-box;
+}
