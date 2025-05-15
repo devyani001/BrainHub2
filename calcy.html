@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BrainHub2 Engineering Calculator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .calculator {
+      background: #1b2838;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px #000;
+      width: 360px;
+    }
+
+    .display {
+      background: black;
+      color: #0f0;
+      font-size: 24px;
+      padding: 10px;
+      height: 50px;
+      text-align: right;
+      border-radius: 10px;
+      overflow-x: auto;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 8px;
+      margin-top: 15px;
+    }
+
+    .buttons button {
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      background: #2e3b4e;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .buttons button:hover {
+      background: #00ffe1;
+      color: black;
+    }
+
+    .span-2 { grid-column: span 2; }
+    .span-3 { grid-column: span 3; }
+    .operator { background: #3d5a80; }
+    .equal { background: #00ffe1; color: #000; }
+    .clear { background: #ff4d4d; }
+  </style>
+</head>
+<body>
+<div class="calculator">
+  <div id="display" class="display">0</div>
+  <div class="buttons">
+    <button onclick="clearDisplay()" class="clear">AC</button>
+    <button onclick="del()">DEL</button>
+    <button onclick="append('(')">(</button>
+    <button onclick="append(')')">)</button>
+    <button onclick="append('^')">xʸ</button>
+    <button onclick="append('Math.sqrt(')">√</button>
+
+    <button onclick="append('7')">7</button>
+    <button onclick="append('8')">8</button>
+    <button onclick="append('9')">9</button>
+    <button onclick="append('/')">÷</button>
+    <button onclick="append('Math.cbrt(')">∛</button>
+    <button onclick="append('Math.PI')">π</button>
+
+    <button onclick="append('4')">4</button>
+    <button onclick="append('5')">5</button>
+    <button onclick="append('6')">6</button>
+    <button onclick="append('*')">×</button>
+    <button onclick="append('Math.E')">e</button>
+    <button onclick="append('Math.exp(')">eˣ</button>
+
+    <button onclick="append('1')">1</button>
+    <button onclick="append('2')">2</button>
+    <button onclick="append('3')">3</button>
+    <button onclick="append('-')">−</button>
+    <button onclick="append('factorial(')">x!</button>
+    <button onclick="append('^(-1)')">x⁻¹</button>
+
+    <button onclick="append('0')">0</button>
+    <button onclick="append('.')">.</button>
+    <button onclick="calculate()" class="equal span-2">=</button>
+    <button onclick="append('+')">+</button>
+    <button onclick="append('log10(')">log</button>
+    <button onclick="append('Math.log(')">ln</button>
+
+    <button onclick="append('Math.sin(')">sin</button>
+    <button onclick="append('Math.cos(')">cos</button>
+    <button onclick="append('Math.tan(')">tan</button>
+    <button onclick="append('Math.asin(')">sin⁻¹</button>
+    <button onclick="append('Math.acos(')">cos⁻¹</button>
+    <button onclick="append('Math.atan(')">tan⁻¹</button>
+
+    <button onclick="append('nCr(')">nCr</button>
+    <button onclick="append('nPr(')">nPr</button>
+    <button onclick="memoryAdd()">M+</button>
+    <button onclick="memorySub()">M−</button>
+    <button onclick="memoryRecall()">MR</button>
+    <button onclick="memoryClear()">MC</button>
+  </div>
+</div>
+
+<script>
+  let display = document.getElementById("display");
+  let memory = 0;
+
+  function append(val) {
+    if (display.innerText === "0" || display.innerText === "Error") {
+      display.innerText = val;
+    } else {
+      display.innerText += val;
+    }
+  }
+
+  function clearDisplay() {
+    display.innerText = "0";
+  }
+
+  function del() {
+    display.innerText = display.innerText.slice(0, -1) || "0";
+  }
+
+  function factorial(n) {
+    n = parseFloat(n);
+    if (n < 0) return NaN;
+    if (n === 0 || n === 1) return 1;
+    let result = 1;
+    for (let i = 2; i <= n; i++) result *= i;
+    return result;
+  }
+
+  function nCr(n, r) {
+    return factorial(n) / (factorial(r) * factorial(n - r));
+  }
+
+  function nPr(n, r) {
+    return factorial(n) / factorial(n - r);
+  }
+
+  function memoryAdd() {
+    memory += evalSafe(display.innerText);
+  }
+
+  function memorySub() {
+    memory -= evalSafe(display.innerText);
+  }
+
+  function memoryRecall() {
+    display.innerText = memory;
+  }
+
+  function memoryClear() {
+    memory = 0;
+  }
+
+  function evalSafe(expr) {
+    try {
+      return Function('"use strict";return (' + convertExpr(expr) + ')')();
+    } catch {
+      return "Error";
+    }
+  }
+
+  function convertExpr(expr) {
+    return expr
+      .replace(/log10\(/g, "Math.log10(")
+      .replace(/\^/g, "**")
+      .replace(/nCr\(([^,]+),([^,\)]+)\)/g, 'nCr($1,$2)')
+      .replace(/nPr\(([^,]+),([^,\)]+)\)/g, 'nPr($1,$2)')
+      .replace(/factorial\(([^,\)]+)\)/g, 'factorial($1)');
+  }
+
+  function calculate() {
+    try {
+      const result = evalSafe(display.innerText);
+      display.innerText = result;
+    } catch {
+      display.innerText = "Error";
+    }
+  }
+</script>
+</body>
+</html>
